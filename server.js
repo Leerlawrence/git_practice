@@ -13,6 +13,6 @@ app.get("/", function(req, res){
 
 
 app.listen(3000, function(){
-  // new FruitApi(app);
+  new FruitApi(app);
   console.log("app running on port" + this.address().port);
 });
