@@ -5,10 +5,10 @@ var path = require("path");
 var FruitApi = require("./api/api");
 
 
-app.use(express.static("public"));
+app.use(express.static("client/build"));
 
 app.get("/", function(req, res){
-  res.sendFile(path.join(__dirname+"/index.html"))
+  res.sendFile(path.join(__dirname+"/client/build/index.html"))
 });
 
 

@@ -1,11 +1,10 @@
 config = {
   entry: "./src/app.js",
   output: {
-
     filename: "bundle.js",
     path: "./build"
-  }
-  // devtool: 'source-map'
+  },
+  devtool: 'source-map'
 }
 
-module.export=config;
+module.exports = config;
