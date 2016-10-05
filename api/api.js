@@ -1,6 +1,6 @@
 var FruitApi = function(app){
 
-  var fruits=["Apple","Orange","Lychee", "Kumquat"];
+  var fruits=["Apple","Orange","Lychee", "Kumquat","Banana", "melon","Strawberries"];
   app.get("/fruits",function(req,res){    
     res.json({data:fruits});
     console.log(res);

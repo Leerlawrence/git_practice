@@ -10,6 +10,7 @@ var UI = function(){
       var fruits = JSON.parse(data);
       var fruitsArray = fruits.data;
       self.render(fruitsArray);
+      
   });
 
 }
@@ -22,8 +23,9 @@ UI.prototype = {
 
       var li = document.createElement("li");
       console.log(fruits[i]);
-      // this.appendText(li, fruits[i],"Fruit: ");
-      li.innerText = fruits[i];
+      consol.log("test")
+    //  this.appendText(li, fruits[i],"Fruit: ");
+      li.innerText = fruits[i] +"fruit";
       container.appendChild(li);  
     }
   }

@@ -69,6 +69,7 @@
 	      var fruits = JSON.parse(data);
 	      var fruitsArray = fruits.data;
 	      self.render(fruitsArray);
+
 	  });
 	
 	}
@@ -82,8 +83,13 @@
 	      var li = document.createElement("li");
 	      console.log(fruits[i]);
 	      // this.appendText(li, fruits[i],"Fruit: ");
-	      li.innerText = fruits[i];
+	      // li.innerText = fruits[i];
+	      htmltext ="<BR><B><U>" + fruits[i] + "<BR>" + "</B>This will be an image of a <B><U>"+fruits[i]+"</B></U> if I knew where to put the image in build" 
+
+	      ;
+	      li.innerHTML=htmltext+"<P><HR>"
 	      container.appendChild(li);  
+
 	    }
 	  }
 	}
