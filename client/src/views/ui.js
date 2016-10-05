@@ -1,6 +1,7 @@
 var RequestFruits = require("../models/requestFruits");
 
 var UI = function(){
+  var self = this;
   var requestFruits = new RequestFruits();
   console.log("hello")
   requestFruits.all("http://localhost:3000/fruits",function(result){
@@ -8,21 +9,23 @@ var UI = function(){
       var data = this.responseText;
       var fruits = JSON.parse(data);
       var fruitsArray = fruits.data;
-      console.log(fruitsArray);
-
+      self.render(fruitsArray);
   });
+
 }
 
 UI.prototype = {
   render: function(fruits){
     var container = document.getElementById("fruits");
 
-    for (var fruit of fruits) {
+    for (var i = 0; i < fruits.length; i ++) {
 
-      var li = documemt.createElement("li");
-      this.appendText(li, fruit,"Fruit: ");
+      var li = document.createElement("li");
+      console.log(fruits[i]);
+      // this.appendText(li, fruits[i],"Fruit: ");
+      li.innerText = fruits[i];
+      container.appendChild(li);  
     }
-    container.appendChild(li);
   }
 }
 
