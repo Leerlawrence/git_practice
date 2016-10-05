@@ -77,15 +77,17 @@
 	UI.prototype = {
 	  render: function(fruits){
 	    var container = document.getElementById("fruits");
-	
+	var imgcntr;
 	    for (var i = 0; i < fruits.length; i ++) {
-	
+	imgctr=i+5;
 	      var li = document.createElement("li");
 	      console.log(fruits[i]);
 	      // this.appendText(li, fruits[i],"Fruit: ");
 	      // li.innerText = fruits[i];
-	      htmltext ="<BR><B><U>" + fruits[i] + "<BR>" + "</B>This will be an image of a <B><U>"+fruits[i]+"</B></U> if I knew where to put the image in build" 
+	      htmltext ="<BR><B><U>" + fruits[i] + "<BR><BR>"
+	       // + "</B>This will be an image of a <B><U>"+fruits[i]+"</B></U> if I knew where to put the image in build" 
 
+	      htmltext=htmltext +"<IMG SRC='https://www.free-pictures-photos.com/fruits/fruit-0" + imgctr + ".jpg' WIDTH='20%'/>" 
 	      ;
 	      li.innerHTML=htmltext+"<P><HR>"
 	      container.appendChild(li);  
